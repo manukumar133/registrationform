@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #D071f9;
+    padding: 0 10px;
+}
+.container{
+    max-width: 500px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 30px;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    /* text-align: center;
+    justify-content: center;
+    font-family:sans-serif;
+    font-size: medium; */
+    background-color: white;
+}
+.container .title{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #D071f9;
+    text-transform: uppercase;
+}
+
+.container .form{
+    width: 100%;
+}
+.container .form .input_field{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.container .form .input_field label{
+    width: 200px;
+    margin-right: 10px;
+    font-size: 20px;
+}
+.container .form .input_field .input,
+.container .form .input_field .textarea{
+    width: 100%;
+    outline: none;
+    border: 1px solid #D071f9;
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 10px;
+    transition: 0.5s ease;
+}
+.container .btn{
+    color:black;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.container .form .input_field .textarea{
+    resize: none;
+    height: 70px;
+
+}
+.container .form .input_field .custom_select
+{
+    position: relative;
+    width: 100%;
+    height: 37%;
+}
+
+.container .form .input_field .custom_select select{
+    border: 1px solid #D071f9;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 100%;
+    padding: 10px 10px;
+    border: 1px solid #D071f9;
+    border-radius: 3px;
+    appearance: none;
+    outline: none;
+}
+
+.container .form .input_field .custom_select:before{
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    border: 8px solid black;
+    border-color: #D071f9 transparent transparent transparent;
+    pointer-events: none;
+}
+.container .form .input_field .input:focus,
+.container .form .input_field .textarea:focus,
+.container .form .input_field select:focus{
+    border: 1px solid purple;
+}
+.container .form .input_field p{
+    font-size: 14px;
+    color: #757575;
+}
+.container .form .input_field .check{
+    width: 15px;
+    height: 15px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+.container .form .input_field .check input[type="checkbox"]{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.container .form .input_field .check .checkmark{
+    width: 15px;
+    height: 15px;
+    border: 1px solid #D071f9;
+    display: block;
+    position: relative;
+    /* background: #D071f9; */
+}
+
+.container .form .input_field .check .checkmark:before{
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 5px;
+    height: 2px;
+    border: 2px solid;
+    border-color: transparent transparent white white;
+    transform: rotate(-45deg);
+}
+.container .form .input_field .check input[type="checkbox"]:checked ~.checkmark{
+    background:  #D071f9;
+}
+.container .form .input_field .check input[type="checkbox"]:checked ~.checkmark:before{
+    display: block;
+}
+
+.container .form .input_field .btn{
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 15px;
+    border: 0;
+    background: #D071f9;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    outline: none;
+}
+.container .form .input_field:last-child{
+    margin-bottom: 0;
+}
+
+
+.container .form .input_field .btn:hover{
+    background-color: purple;
+}
+@media (max-width:420px){
+    .container .form .input_field{
+       flex-direction: column;
+       align-items: flex-start;
+    }
+    .container .form .input_field label{
+       margin-bottom: 5px;
+    }
+    .container .form .input_field.terms{
+        flex-direction: row;
+    }
+}
